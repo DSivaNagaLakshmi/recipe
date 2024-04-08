@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Title</title>
+    <style>
+
+      body {
+        font-family:'Times New Roman', Times, serif;
+        background-color: black;
+      }
+      
+      h1 {
+        color: white;
+        text-align: center;
+      }
+      
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: justify;
+        margin: 98px;
+        margin-left: 5%;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="POST">
+        <h1>{{data[0]}}</h1>
+        <p>{{data[1]}}</p>
+        <img src="{{url_for('static',filename=data[2]+'.jpg')}}" height="200" width="200" class="exploreimage w-100"/>
+    </form>
+    
+  </body>
+</html>

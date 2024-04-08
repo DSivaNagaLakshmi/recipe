@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<style>
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        background-image: url('https://t4.ftcdn.net/jpg/04/05/83/49/360_F_405834980_q7kToQNejjuNc9MVaLvP0yaiD08Z2Kli.jpg');
+        background-size:cover;
+    }
+    .form-container {
+	margin: 80px auto;
+	max-width: 800px;
+	padding: 20px;
+    margin-left: 31%;
+    width:650px;
+    height:600px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    color: #fff;
+    backdrop-filter:blur(5px);
+}
+
+h2 {
+	text-align: center;
+    color: #fff;
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+input[type="text"], textarea, select {
+	width: 95%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+select option[disabled] {
+	color: #ccc;
+}
+
+input[type="submit"]{
+	background-color: blue;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+	background-color: #0062cc;
+}
+.btnstyle {
+            background-color:blue;
+            color:white;
+            padding:10px;
+            border-radius: 8px;
+            border:none;
+            margin: 10px;
+            cursor: pointer;
+            border-top: 20cm;
+            margin-left: 70%;
+        }
+
+</style>
+<html>
+<head>
+	<title>Recipe Title Entry</title>
+</head>
+<body>
+	<div class="form-container">
+		<h2>Enter Recipe Details</h2>
+		<form  method="POST" enctype="multipart/form-data">
+			<label for="blog-title">Title:</label>
+			<input type="text" id="blog-title" name="title" required>
+            <br>
+            <br>
+
+			<label for="blog-description">Description:</label>
+			<textarea id="blog-description" name="description" required></textarea><br>
+            <br>
+            <br>
+
+			<label for="blog-category">Categories:</label>
+			<select id="blog-category" name="Categories" required><br>
+				<option value="" disabled selected>Select a category</option>
+				<option value="vegfood">vegfood</option>
+				<option value="nonvegfood">nonvegfood</option>
+				<option value="pastry">pastry</option>
+				<option value="icecreams">icecreams</option>
+                <option value="starters">starters</option>
+				<option value="soups">soups</option>
+                </select>
+				<label for="blog-category">Upload recipe</label>
+
+				<input type="file" name="image">
+
+			<br><input type="submit" value="Submit"><button class="btnstyle">Back</button>
+		</form>
+	</div>
+</body>
+</html>
